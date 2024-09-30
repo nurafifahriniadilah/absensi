@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Attend<span>icus</span></h2>
+                <p>Simple Attendance System</p>
+            </div>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-calendar-check"></i> Absen</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>                
+                <div class="greeting">
+                    <h1>Selamat Pagi, Ahmad Mauluddin</h1>
+                    <p>Selamat datang di sistem absensi pegawai! :)</p>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <p>Ahmad Mauluddin</p>
+                        <span>Pegawai</span>
+                    </div>
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+            
+
+            <section class="main-section">
+                <!-- Absensi Reminder -->
+                <div class="absensi-reminder">
+                    <div class="reminder-box warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Anda Belum Melakukan Absensi! Mohon untuk segera melakukan absensi sebelum batas waktu.</p>
+                    </div>
+                    <div class="reminder-box info">
+                        <p>Ada Saran? Mohon untuk segera melakukan absensi sebelum batas waktu.</p>
+                    </div>
+                </div>
+
+                <!-- Kalender dan Monitoring -->
+                <div class="dashboard-grid">
+                    <!-- Calendar Section -->
+                    <div class="calendar-section">
+                        <div class="calendar-header">
+                            <h2>September 2024</h2>
+                        </div>
+                        <div class="calendar">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sun</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Calendar rows (should be generated dynamically in JS for real use) -->
+                                    <tr>
+                                        <td></td>
+                                        <td>30</td>
+                                        <td>31</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring Absensi Section -->
+                    <div class="monitoring-absensi-section">
+                        <h2>Monitoring Absensi</h2>
+                        <div class="filter-buttons">
+                            <button class="filter active">Harian</button>
+                            <button class="filter">Mingguan</button>
+                            <button class="filter">Bulanan</button>
+                        </div>
+                        <table class="monitoring-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Nama</th>
+                                    <th>Role</th>
+                                    <th>Dept.</th>
+                                    <th>Status</th>
+                                    <th>Check-in</th>
+                                    <th>Check-out</th>
+                                    <th>Jam Kerja</th>
+                                    <th>Overtime</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30/09</td>
+                                    <td>Ahmad Mauluddin</td>
+                                    <td>Magang</td>
+                                    <td>UPT TIK</td>
+                                    <td><span class="status late">Telat</span></td>
+                                    <td>07.30 WIB</td>
+                                    <td>16.00 WIB</td>
+                                    <td>8jam 40menit</td>
+                                    <td>0jam</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
